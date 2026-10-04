@@ -1,0 +1,15 @@
+<svg width="850" height="350" viewBox="0 0 850 350" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gardenSky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fff1f2"/>
+      <stop offset="100%" stop-color="#fbcfe8"/>
+    </linearGradient>
+  </defs>
+  <rect width="850" height="350" fill="url(#gardenSky)"/>
+  <path d="M -20 350 Q 300 230 870 350 Z" fill="#86efac"/>
+  <!-- Garden Flowers -->
+  <circle cx="100" cy="280" r="18" fill="#ff70a6"/>
+  <circle cx="140" cy="290" r="15" fill="#ffdd00"/>
+  <circle cx="700" cy="270" r="20" fill="#a855f7"/>
+  <circle cx="750" cy="290" r="16" fill="#ec4899"/>
+</svg>

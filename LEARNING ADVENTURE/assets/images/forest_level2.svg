@@ -1,0 +1,18 @@
+<svg width="850" height="350" viewBox="0 0 850 350" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="forestSky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e0f2fe"/>
+      <stop offset="100%" stop-color="#7dd3fc"/>
+    </linearGradient>
+  </defs>
+  <rect width="850" height="350" fill="url(#forestSky)"/>
+  <ellipse cx="200" cy="60" rx="70" ry="30" fill="#ffffff" opacity="0.8"/>
+  <ellipse cx="650" cy="80" rx="90" ry="35" fill="#ffffff" opacity="0.8"/>
+  <!-- Pine Trees -->
+  <polygon points="120,350 50,150 190,150" fill="#0369a1"/>
+  <polygon points="120,220 70,80 170,80" fill="#0284c7"/>
+  <polygon points="730,350 640,120 820,120" fill="#0369a1"/>
+  <polygon points="730,200 670,60 790,60" fill="#0284c7"/>
+  <!-- Tree Branch for Bird -->
+  <path d="M 400 180 L 600 130" stroke="#78350f" stroke-width="16" stroke-linecap="round"/>
+</svg>

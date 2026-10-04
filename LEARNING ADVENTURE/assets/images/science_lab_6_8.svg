@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+<defs>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#07111f"/><stop offset="0.5" stop-color="#0b2030"/><stop offset="1" stop-color="#10243d"/></linearGradient>
+ <radialGradient id="glow"><stop stop-color="#38bdf8" stop-opacity=".28"/><stop offset="1" stop-color="#38bdf8" stop-opacity="0"/></radialGradient>
+ <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse"><path d="M48 0H0V48" fill="none" stroke="#67e8f9" stroke-opacity=".08"/></pattern>
+ <filter id="blur"><feGaussianBlur stdDeviation="18"/></filter>
+</defs>
+<rect width="1600" height="900" fill="url(#bg)"/><rect width="1600" height="900" fill="url(#grid)"/>
+<circle cx="230" cy="160" r="250" fill="url(#glow)" filter="url(#blur)"/><circle cx="1390" cy="720" r="280" fill="url(#glow)" filter="url(#blur)"/>
+<g fill="none" stroke="#67e8f9" stroke-opacity=".18" stroke-width="3">
+ <path d="M70 730H430V640H650"/><path d="M1160 170H1510V260H1580"/><path d="M90 220H300V300H470"/>
+ <circle cx="430" cy="730" r="8"/><circle cx="1160" cy="170" r="8"/><circle cx="470" cy="300" r="8"/>
+</g>
+<g fill="#e0f2fe" fill-opacity=".14"><rect x="70" y="90" width="300" height="150" rx="18"/><rect x="1230" y="90" width="280" height="170" rx="18"/><rect x="1210" y="600" width="300" height="170" rx="18"/><rect x="80" y="620" width="300" height="160" rx="18"/></g>
+<g fill="#67e8f9" fill-opacity=".18"><circle cx="135" cy="140" r="5"/><circle cx="175" cy="180" r="4"/><circle cx="1300" cy="140" r="5"/><circle cx="1400" cy="190" r="4"/><circle cx="1300" cy="660" r="5"/><circle cx="250" cy="700" r="4"/></g>
+<!-- subtle lab silhouettes -->
+<g fill="#dbeafe" fill-opacity=".08"><path d="M1260 770v-70h28v-90h70v90h28v70z"/><path d="M150 780v-90h34v-55h62v55h34v90z"/></g>
+</svg>

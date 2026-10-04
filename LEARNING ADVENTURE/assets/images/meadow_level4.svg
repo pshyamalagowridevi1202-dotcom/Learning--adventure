@@ -1,0 +1,14 @@
+<svg width="850" height="350" viewBox="0 0 850 350" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="meadowSky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e0e7ff"/>
+      <stop offset="100%" stop-color="#c7d2fe"/>
+    </linearGradient>
+  </defs>
+  <rect width="850" height="350" fill="url(#meadowSky)"/>
+  <path d="M -50 350 Q 400 170 900 350 Z" fill="#4ade80"/>
+  <!-- Fence -->
+  <rect x="50" y="240" width="15" height="70" fill="#b45309"/>
+  <rect x="120" y="240" width="15" height="70" fill="#b45309"/>
+  <line x1="40" y1="260" x2="140" y2="260" stroke="#b45309" stroke-width="8"/>
+</svg>

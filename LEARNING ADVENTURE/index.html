@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learning Adventure - Kids Activities & Games</title>
+  <meta name="description"
+    content="A cute, colorful, interactive learning adventure for Nursery to 10th Class with fun games and educational activities.">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@600;800;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- Animated Background Cartoon World -->
+  <div class="bg-decorations">
+    <div class="cloud cloud-1"></div>
+    <div class="cloud cloud-2"></div>
+    <div class="cloud cloud-3"></div>
+    <div class="butterfly bf-1">🦋</div>
+    <div class="butterfly bf-2">🦋</div>
+    <div class="sparkle sp-1">✨</div>
+    <div class="sparkle sp-2">✨</div>
+  </div>
+
+  <div class="ground-hills">
+    <div class="flower-group">
+      <span class="sway-flower">🌸</span>
+      <span class="sway-flower">🌼</span>
+      <span class="sway-flower">🌻</span>
+      <span class="sway-flower">🌷</span>
+    </div>
+  </div>
+
+  <!-- Confetti Celebration Canvas -->
+  <canvas id="confettiCanvas"></canvas>
+
+  <!-- Main Layout Wrapper -->
+  <div class="app-container">
+
+    <!-- ==========================================
+         VIEW 1: WELCOME / HOME PAGE
+         ========================================== -->
+    <section id="homeView" class="view-section active">
+      <div class="welcome-hero-card">
+        <div class="welcome-banner">
+          <div class="mascot-avatar">🐰</div>
+          <h1 class="welcome-title">Welcome to <span>Learning Adventure</span></h1>
+          <p class="welcome-subtitle">Learn • Play • Explore!</p>
+
+          <!-- Three Main Large Option Cards -->
+          <div class="welcome-options-container">
+            <div class="option-card option-card-activities" id="heroActivitiesBtn">
+              <div class="option-card-icon">🎨</div>
+              <h2 class="option-card-title">ACTIVITIES</h2>
+              <p class="option-card-desc">Interactive educational fun for Nursery to 10th Class!</p>
+              <button class="option-btn btn-act-go">Explore Activities ➡️</button>
+            </div>
+
+            <div class="option-card option-card-games" id="heroGamesBtn">
+              <div class="option-card-icon">🎮</div>
+              <h2 class="option-card-title">GAMES</h2>
+              <p class="option-card-desc">Fun 1-finger mini-games for all classes!</p>
+              <button class="option-btn btn-game-go">Play Games ➡️</button>
+            </div>
+
+            <div class="option-card option-card-magical" id="heroMagicalWorldBtn">
+              <div class="option-card-icon">✨</div>
+              <h2 class="option-card-title">MAGICAL WORLD</h2>
+              <p class="option-card-desc">Step into wonder, interactive magic & more!</p>
+              <button class="option-btn btn-magical-go">Enter Magic ➡️</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         VIEW 2: ACTIVITIES CLASS SELECTION PAGE
+         ========================================== -->
+    <section id="activitiesView" class="view-section">
+      <!-- Simple Header -->
+      <header class="simple-header">
+        <div class="logo logo-trigger">
+          <span class="logo-badge">🌈</span>
+          <span>Learning Adventure</span>
+        </div>
+        <div class="nav-controls">
+          <button class="nav-btn btn-home btn-go-home" id="btnNavActHome">🏡 Home</button>
+          <button class="nav-btn btn-sound sound-toggle-btn" title="Toggle Sound">🔊</button>
+        </div>
+      </header>
+
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">🎨 Choose Your Class</h2>
+          <p class="section-subtitle">Select your class level to view learning activities!</p>
+        </div>
+      </div>
+
+      <!-- 13 Class Cards Grid (Nursery to 10th) -->
+      <div class="cards-grid class-selection-grid">
+        <div class="card class-card primary-class" onclick="app.openClassActivities('nursery', 'Nursery')">
+          <div class="card-icon">🌱</div>
+          <div class="card-title">Nursery</div>
+          <div class="card-desc">Colors, Animal Sounds & Basic Shapes</div>
+          <span class="card-badge badge-nursery">Age 2 - 3</span>
+        </div>
+
+        <div class="card class-card primary-class" onclick="app.openClassActivities('lkg', 'LKG')">
+          <div class="card-icon">🐣</div>
+          <div class="card-title">LKG</div>
+          <div class="card-desc">Alphabets, Numbers 1-10 & Fruits</div>
+          <span class="card-badge badge-lkg">Age 3 - 4</span>
+        </div>
+
+        <div class="card class-card primary-class" onclick="app.openClassActivities('ukg', 'UKG')">
+          <div class="card-icon">⭐</div>
+          <div class="card-title">UKG</div>
+          <div class="card-desc">Counting Baskets & Observation</div>
+          <span class="card-badge badge-ukg">Age 4 - 5</span>
+        </div>
+
+        <div class="card class-card primary-class" onclick="app.openClassActivities('class1', '1st Class')">
+          <div class="card-icon">📘</div>
+          <div class="card-title">1st Class</div>
+          <div class="card-desc">First Math Fun & Nature Explorer</div>
+          <span class="card-badge badge-class1">Grade 1</span>
+        </div>
+
+        <div class="card class-card primary-class" onclick="app.openClassActivities('class2', '2nd Class')">
+          <div class="card-icon">📗</div>
+          <div class="card-title">2nd Class</div>
+          <div class="card-desc">Word Building & Addition Practice</div>
+          <span class="card-badge badge-c2">Grade 2</span>
+        </div>
+
+        <div class="card class-card primary-class" onclick="app.openClassActivities('class3', '3rd Class')">
+          <div class="card-icon">🚀</div>
+          <div class="card-title">3rd Class</div>
+          <div class="card-desc">Times Tables & Reading Stories</div>
+          <span class="card-badge badge-c3">Grade 3</span>
+        </div>
+
+        <div class="card class-card middle-class" onclick="app.openClassActivities('class4', '4th Class')">
+          <div class="card-icon">🔬</div>
+          <div class="card-title">4th Class</div>
+          <div class="card-desc">Plant Life & General Science</div>
+          <span class="card-badge badge-c4">Grade 4</span>
+        </div>
+
+        <div class="card class-card middle-class" onclick="app.openClassActivities('class5', '5th Class')">
+          <div class="card-icon">📐</div>
+          <div class="card-title">5th Class</div>
+          <div class="card-desc">Fractions & Geometry Basics</div>
+          <span class="card-badge badge-c5">Grade 5</span>
+        </div>
+
+        <div class="card class-card middle-class" onclick="app.openClassActivities('class6', '6th Class')">
+          <div class="card-icon">🌍</div>
+          <div class="card-title">6th Class</div>
+          <div class="card-desc">Earth Science & Continents</div>
+          <span class="card-badge badge-c6">Grade 6</span>
+        </div>
+
+        <div class="card class-card high-class" onclick="app.openClassActivities('class7', '7th Class')">
+          <div class="card-icon">🧪</div>
+          <div class="card-title">7th Class</div>
+          <div class="card-desc">States of Matter & Physics Intro</div>
+          <span class="card-badge badge-c7">Grade 7</span>
+        </div>
+
+        <div class="card class-card high-class" onclick="app.openClassActivities('class8', '8th Class')">
+          <div class="card-icon">⚡</div>
+          <div class="card-title">8th Class</div>
+          <div class="card-desc">Force, Energy & Advanced Science</div>
+          <span class="card-badge badge-c8">Grade 8</span>
+        </div>
+
+        <div class="card class-card high-class" onclick="app.openClassActivities('class9', '9th Class')">
+          <div class="card-icon">⚙️</div>
+          <div class="card-title">9th Class</div>
+          <div class="card-desc">Algebra & High School Foundations</div>
+          <span class="card-badge badge-c9">Grade 9</span>
+        </div>
+
+        <div class="card class-card high-class" onclick="app.openClassActivities('class10', '10th Class')">
+          <div class="card-icon">🎓</div>
+          <div class="card-title">10th Class</div>
+          <div class="card-desc">Trigonometry & Board Exam Prep</div>
+          <span class="card-badge badge-c10">Grade 10</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         VIEW 3: DEDICATED CLASS ACTIVITIES LIST PAGE
+         ========================================== -->
+    <section id="classActivitiesView" class="view-section">
+      <!-- Simple Header -->
+      <header class="simple-header">
+        <div class="logo logo-trigger">
+          <span class="logo-badge">🌈</span>
+          <span>Learning Adventure</span>
+        </div>
+        <div class="nav-controls">
+          <button class="nav-btn btn-activities" id="btnBackToActClasses">⬅️ Choose Class</button>
+          <button class="nav-btn btn-home btn-go-home">🏡 Home</button>
+          <button class="nav-btn btn-sound sound-toggle-btn" title="Toggle Sound">🔊</button>
+        </div>
+      </header>
+
+      <div class="section-header">
+        <div>
+          <h2 class="section-title" id="classActTitle">Class Activities</h2>
+          <p class="section-subtitle">Click an activity to begin your interactive challenge!</p>
+        </div>
+      </div>
+
+      <div class="cards-grid" id="classActivitiesGrid">
+        <!-- Dynamically rendered via app.js -->
+      </div>
+    </section>
+
+    <!-- ==========================================
+         VIEW 4: GAMES CLASS SELECTION PAGE
+         ========================================== -->
+    <section id="gamesView" class="view-section">
+      <header class="simple-header">
+        <div class="logo logo-trigger">
+          <span class="logo-badge">🌈</span>
+          <span>Learning Adventure</span>
+        </div>
+        <div class="nav-controls">
+          <button class="nav-btn btn-home btn-go-home" id="btnNavGamesHome">🏡 Home</button>
+          <button class="nav-btn btn-sound sound-toggle-btn" title="Toggle Sound">🔊</button>
+        </div>
+      </header>
+
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">🎮 GAMES ZONE</h2>
+          <p class="section-subtitle">A magical adventure for fun, motion, and smiles.</p>
+        </div>
+      </div>
+
+      <div class="games-zone-shell">
+        <div class="games-zone-grid">
+          <div class="games-zone-card">
+            <div class="games-zone-badge">Fun • Motion • Magic</div>
+            <div class="games-zone-icon">🚀</div>
+            <h3 class="games-zone-title">MAGIC SKY RUNNER</h3>
+            <p class="games-zone-desc">
+              Dash through the clouds, dodge sparkling obstacles, catch glowing stars, and guide your little explorer
+              with just your index finger.
+            </p>
+
+            <div class="games-zone-actions">
+              <button class="primary-game-btn" id="startMagicSkyRunnerBtn">▶ Start Game</button>
+              <button class="secondary-game-btn" id="viewGamesInfoBtn">How to Play</button>
+            </div>
+
+            <ul class="games-zone-list">
+              <li>Move your index finger left or right to glide</li>
+              <li>Lift your finger upward to jump</li>
+              <li>Collect glowing stars and avoid magical blockers</li>
+              <li>Play with camera controls only</li>
+            </ul>
+          </div>
+
+          <div class="games-zone-card star-catcher-card">
+            <div class="games-zone-badge">Magic • Catch • Smile</div>
+            <div class="games-zone-icon">✨</div>
+            <h3 class="games-zone-title">Star Catcher</h3>
+            <p class="games-zone-desc">
+              Catch magical stars using your index finger and build a glowing sky-high score!
+            </p>
+
+            <div class="games-zone-actions">
+              <button class="primary-game-btn" id="startStarCatcherBtn">▶ Start Game</button>
+            </div>
+
+            <ul class="games-zone-list">
+              <li>Move your index finger to catch stars</li>
+              <li>Golden stars give bonus points</li>
+              <li>Beat the 60-second challenge</li>
+              <li>Play with camera controls only</li>
+            </ul>
+          </div>
+
+          <div class="games-zone-card magic-drag-card">
+            <div class="games-zone-badge">Magic • Drag • Sparkle</div>
+            <div class="games-zone-icon">🪄</div>
+            <h3 class="games-zone-title">Magic Drag</h3>
+            <p class="games-zone-desc">
+              Drag magical objects using your index finger and match them to the glowing magical zones!
+            </p>
+
+            <div class="games-zone-actions">
+              <button class="primary-game-btn" id="startMagicDragBtn">▶ Start Game</button>
+            </div>
+
+            <ul class="games-zone-list">
+              <li>Move your index finger over an object</li>
+              <li>Lift and drag it to the matching magical zone</li>
+              <li>Match stars, moons, clouds, gems, and more</li>
+              <li>Play with camera controls only</li>
+            </ul>
+          </div>
+
+          <div class="games-zone-card block-builder-card">
+            <div class="games-zone-badge">Build • Balance • Glow</div>
+            <div class="games-zone-icon">🧱</div>
+            <h3 class="games-zone-title">Block Builder</h3>
+            <p class="games-zone-desc">
+              Guide magical blocks with your index finger, drop them carefully, and build the tallest glowing tower you
+              can.
+            </p>
+
+            <div class="games-zone-actions">
+              <button class="primary-game-btn" id="startBlockBuilderBtn">▶ Start Game</button>
+            </div>
+
+            <ul class="games-zone-list">
+              <li>Move your index finger to position each block</li>
+              <li>Hold steady to drop the block safely</li>
+              <li>Stack with perfect balance for bonus points</li>
+              <li>Play with camera controls only</li>
+            </ul>
+          </div>
+
+          <div class="games-zone-card magic-target-card">
+            <div class="games-zone-badge">Focus • Aim • Magic</div>
+            <div class="games-zone-icon">🎯</div>
+            <h3 class="games-zone-title">MAGIC TARGET HUNT</h3>
+            <p class="games-zone-desc">
+              Follow the glowing fingertip, lock onto each magical target, and build a sparkling combo before time runs
+              out.
+            </p>
+
+            <div class="games-zone-actions">
+              <button class="primary-game-btn" id="startMagicTargetHuntBtn">▶ Start Game</button>
+            </div>
+
+            <ul class="games-zone-list">
+              <li>Use only your index fingertip</li>
+              <li>Move to the glowing target and tap it</li>
+              <li>Earn combo points and golden bonuses</li>
+              <li>Beat the timer before the portal closes</li>
+            </ul>
+          </div>
+          <div class="games-zone-card neon-dodge-card">
+            <div class="games-zone-badge">Dodge • Move • Survive</div>
+            <div class="games-zone-icon">⚡</div>
+            <h3 class="games-zone-title">NEON DODGE</h3>
+            <p class="games-zone-desc">
+              Guide your glowing explorer through a magical neon world, dodge moving obstacles, collect stars, and
+              survive the challenge using your index finger.
+            </p>
+
+            <div class="games-zone-actions">
+              <button class="primary-game-btn" id="startNeonDodgeBtn">▶ Start Game</button>
+            </div>
+
+            <ul class="games-zone-list">
+              <li>Move your index finger to guide the explorer</li>
+              <li>Dodge the glowing obstacles</li>
+              <li>Collect stars to increase your score</li>
+              <li>Survive the challenge and beat your best score</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         VIEW 5: MAGICAL WORLD PAGE
+         ========================================== -->
+    <section id="magicalWorldView" class="view-section">
+      <header class="simple-header">
+        <div class="logo logo-trigger">
+          <span class="logo-badge">🌈</span>
+          <span>Learning Adventure</span>
+        </div>
+        <div class="nav-controls">
+          <button class="nav-btn btn-home btn-go-home" id="btnNavMagicalHome">🏡 Home</button>
+          <button class="nav-btn btn-sound sound-toggle-btn" title="Toggle Sound">🔊</button>
+        </div>
+      </header>
+
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">✨ Magical World</h2>
+          <p class="section-subtitle">Touch-free wonder and creative tools for students and teachers!</p>
+        </div>
+      </div>
+
+      <div class="magical-world-shell">
+        <div class="magical-world-grid">
+          <div class="option-card option-card-magic-board" id="magicBoardOptionCard">
+            <div class="option-card-icon">🪄</div>
+            <h2 class="option-card-title">MAGIC BOARD</h2>
+            <p class="option-card-desc">Create and teach without touching the screen.</p>
+            <button class="option-btn btn-board-go">Open Board ✨</button>
+          </div>
+
+          <div class="option-card option-card-magical-cloth" id="magicalClothOptionCard">
+            <div class="option-card-icon">✨</div>
+            <h2 class="option-card-title">MAGICAL CLOTH</h2>
+            <p class="option-card-desc">Step into a magical visual experience.</p>
+            <button class="option-btn btn-cloth-go">Discover Cloth 🌟</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         VIEW 5B: MAGIC BOARD (TOUCH-FREE SMART BOARD)
+         ========================================== -->
+    <section id="magicBoardView" class="view-section">
+      <div class="magic-board-wrapper" id="magicBoardWrapper" style="height:100vh;">
+        <!-- Magic Board Header -->
+        <header class="magic-board-header" id="magicBoardHeader">
+          <div class="magic-header-left">
+            <button class="magic-nav-btn" id="magicBoardBackBtn" title="Back to Magical World">← Magical World</button>
+            <!-- Gesture & Camera Status Banner -->
+            <div class="magic-board-status-badge" id="magicBoardStatusBadge">
+              <span class="magic-status-dot" id="magicBoardStatusDot"></span>
+              <span class="magic-status-text" id="magicBoardStatusText">Camera Ready</span>
+            </div>
+          </div>
+
+          <div class="magic-header-right">
+            <button class="magic-nav-btn" id="magicBoardThemeBtn" title="Toggle Chalkboard / Whiteboard">🌓
+              Whiteboard</button>
+            <button class="magic-nav-btn" id="magicBoardFullscreenBtn" title="Toggle Fullscreen">⛶ Fullscreen</button>
+            <button class="magic-nav-btn sound-toggle-btn" title="Toggle Sound">🔊</button>
+          </div>
+        </header>
+
+        <!-- Fixed Teacher Action Toolbar (Never moves / Non-draggable) -->
+        <div class="magic-board-toolbar" id="magicBoardToolbar">
+          <div class="magic-tool-group">
+            <button class="magic-action-btn btn-writing-toggle active" id="magicBoardStartBtn"
+              title="Toggle Air Writing">
+              <span class="btn-icon">✍️</span>
+              <span class="btn-label">Writing: ON</span>
+            </button>
+            <button class="magic-action-btn" id="magicBoardFinishWordBtn" title="Convert Air Writing to Digital Text">
+              <span class="btn-icon">✨</span>
+              <span class="btn-label">Convert Word</span>
+            </button>
+          </div>
+
+          <div class="magic-tool-group">
+            <button class="magic-action-btn" id="magicBoardUndoBtn" title="Undo Last Recognized Word" disabled>
+              <span class="btn-icon">↩️</span>
+              <span class="btn-label">Undo Word</span>
+            </button>
+            <button class="magic-action-btn btn-clear" id="magicBoardClearBtn" title="Clear All Digital Text">
+              <span class="btn-icon">🗑️</span>
+              <span class="btn-label">Clear Text</span>
+            </button>
+          </div>
+
+          <div class="magic-tool-group">
+            <button class="magic-action-btn" id="magicBoardSpeakBtn" title="Read Recognized Text Aloud">
+              <span class="btn-icon">🔊</span>
+              <span class="btn-label">Read Aloud</span>
+            </button>
+            <button class="magic-action-btn" id="magicBoardCopyBtn" title="Copy Digital Text">
+              <span class="btn-icon">📋</span>
+              <span class="btn-label">Copy Text</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Main Air Handwriting & Digital Text Stage -->
+        <div class="magic-board-stage" id="magicBoardStage">
+          <!-- Digital Text Document Area (MS Word / Notepad Style) -->
+          <div class="magic-doc-container" id="magicBoardDocContainer">
+            <div class="magic-doc-header">
+              <div class="magic-doc-tabs">
+                <span class="doc-tab active">📄 Digital Text Output</span>
+              </div>
+              <div class="magic-doc-meta">
+                <span class="doc-word-count" id="magicDocWordCount">0 words</span>
+                <span class="doc-status-indicator" id="magicDocStatus">Ready for writing</span>
+              </div>
+            </div>
+            <div class="magic-doc-paper" id="magicDocPaper">
+              <div class="magic-doc-content" id="magicBoardRecognizedText">
+                <span class="doc-placeholder" id="magicDocPlaceholder">Write a word in the air (e.g. CAT, APPLE, HELLO)
+                  to see clean typed text appear here...</span>
+              </div>
+              <span class="magic-doc-cursor" id="magicDocCursor"></span>
+            </div>
+          </div>
+
+          <!-- Air Handwriting Interactive Canvas Area -->
+          <div class="magic-board-canvas-container" id="magicBoardCanvasContainer">
+            <!-- Guideline Overlay for Air Writing Zone -->
+            <div class="air-writing-guide" id="airWritingGuide">
+              <div class="guide-box">
+                <div class="guide-header-tag">✍️ Air Writing Zone (Pinch to write letters)</div>
+                <div class="guide-baseline"></div>
+              </div>
+            </div>
+            <!-- Canvas for temporary, crisp ink feedback while writing (clears upon recognition) -->
+            <canvas id="magicBoardCanvas"></canvas>
+            <canvas id="magicBoardOverlayCanvas"></canvas>
+          </div>
+
+          <!-- Floating Gesture Cursor (Fingertip Pointer & Palm Eraser) -->
+          <div class="magic-board-cursor" id="magicBoardCursor">
+            <div class="cursor-ring"></div>
+            <div class="cursor-dot"></div>
+            <div class="cursor-badge" id="magicBoardCursorBadge">☝️ Point / Pinch</div>
+          </div>
+
+          <!-- Mini Camera PIP Preview -->
+          <div class="magic-camera-pip" id="magicBoardCameraPip">
+            <video id="magicBoardWebcam" autoplay muted playsinline></video>
+            <div class="pip-label">
+              <span class="pip-dot"></span>
+              <span id="magicBoardPipStatus">Live Camera</span>
+            </div>
+          </div>
+
+          <!-- Gesture Quick Tips Toast -->
+          <div class="magic-gesture-tips" id="magicGestureTips">
+            <span class="tip-item">☝️ <strong>Point:</strong> Move / Hover</span>
+            <span class="tip-divider">•</span>
+            <span class="tip-item">🤏 <strong>Pinch:</strong> Air Write / Click Button</span>
+            <span class="tip-divider">•</span>
+            <span class="tip-item">🖐️ <strong>Open Palm:</strong> Erase Strokes</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ==========================================
+         VIEW 5C: MAGICAL CLOTH (INVISIBLE CLOAK)
+         ========================================== -->
+    <section id="magicalClothView" class="view-section" style="display:none;">
+      <div class="magical-cloth-wrapper" id="magicalClothWrapper"
+        style="position:relative; height:100vh; overflow:hidden;">
+        <!-- Reuse existing video element (magicBoardWebcam) for stream -->
+        <canvas id="magicalClothCanvas"
+          style="position:absolute; top:0; left:0; width:100%; height:100%; pointer-events:none;"></canvas>
+        <div id="magicalClothStatus"
+          style="position:absolute; top:10px; left:50%; transform:translateX(-50%); background:rgba(0,0,0,0.6); color:#fff; padding:6px 12px; border-radius:8px; font-family:var(--font-heading); font-size:1rem; display:none;">
+          ✨ Magical Cloth Ready!</div>
+        <button id="magicalClothResetBtn" class="option-btn"
+          style="position:absolute; bottom:20px; left:50%; transform:translateX(-50%); padding:10px 20px; font-size:1rem; background:#ff70a6; color:#fff; border:none; border-radius:8px; cursor:pointer;">Reset
+          / Recapture</button>
+        <button id="magicalClothBackBtn" class="magic-nav-btn" style="position:absolute; top:10px; left:10px;"
+          title="Back to Magical World">← Magical World</button>
+        </button><button id="magicalClothHomeBtn" class="magic-nav-btn" style="position:absolute; top:10px; right:10px;" title="Go to Home">🏠 Home</button>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         VIEW 6: ACTIVITY PLAY ARENA
+         ========================================== -->
+    <section id="activityPlay" class="view-section">
+      <header class="simple-header">
+        <div class="logo logo-trigger">
+          <span class="logo-badge">🌈</span>
+          <span>Learning Adventure</span>
+        </div>
+        <div class="nav-controls">
+          <button class="nav-btn btn-activities" id="backToActivities">⬅️ Activities</button>
+          <button class="nav-btn btn-home btn-go-home">🏡 Home</button>
+          <button class="nav-btn btn-sound sound-toggle-btn" title="Toggle Sound">🔊</button>
+        </div>
+      </header>
+
+      <div class="arena-card">
+        <div class="arena-header">
+          <div class="arena-title-wrap">
+            <h2 class="section-title" id="arenaTitle">Activity Title</h2>
+          </div>
+        </div>
+
+        <!-- Voice & Instruction Banner -->
+        <div class="instruction-banner">
+          <span class="instruction-avatar">📢</span>
+          <span class="instruction-text" id="instructionText">Loading prompt...</span>
+          <button class="replay-audio-btn" id="replayAudioBtn" title="Hear Again">🔊</button>
+        </div>
+
+        <!-- Stage Space for Interactive Elements -->
+        <div class="activity-stage" id="activityStage">
+          <!-- Rendered via activityEngine.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         VIEW 7: GAME PLAY ARENA
+         ========================================== -->
+    <section id="gamePlay" class="view-section">
+      <header class="simple-header">
+        <div class="logo logo-trigger">
+          <span class="logo-badge">🌈</span>
+          <span>Learning Adventure</span>
+        </div>
+        <div class="nav-controls">
+          <button class="nav-btn btn-games" id="backToGames">⬅️ Games</button>
+          <button class="nav-btn btn-home btn-go-home">🏡 Home</button>
+          <button class="nav-btn btn-sound sound-toggle-btn" title="Toggle Sound">🔊</button>
+        </div>
+      </header>
+
+      <div class="arena-card">
+        <div class="arena-header">
+          <div class="arena-title-wrap">
+            <h2 class="section-title">🎮 Magic Sky Runner</h2>
+          </div>
+        </div>
+
+        <div class="game-controls-bar">
+          <button class="game-control-btn" id="gameStartBtn">Start Game</button>
+          <button class="game-control-btn secondary" id="gamePauseBtn">Pause</button>
+        </div>
+
+        <div class="game-stage-container">
+          <div class="game-hud">
+            <div class="hud-score" id="gameScore">Score: 0</div>
+            <div class="hud-score hud-lives" id="gameLives">Lives: 3</div>
+          </div>
+
+          <div class="game-camera-panel" id="gameCameraPanel">
+            <video id="gameWebcam" autoplay muted playsinline></video>
+            <div class="camera-status" id="cameraStatus">Waiting for camera…</div>
+          </div>
+
+          <canvas id="gameCanvas"></canvas>
+          <div class="game-status-banner" id="gameStatusBanner">Allow Camera Access</div>
+          <div class="game-message-overlay hidden" id="gameMessageOverlay"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>🌈 Learning Adventure — Designed with ❤️ for Kids (Nursery to 10th Class)</p>
+    </footer>
+
+  </div>
+
+  <!-- ==========================================
+       ☝️ 1-FINGER INSTRUCTION DEMO MODAL
+       ========================================== -->
+  <div class="instruction-modal-overlay" id="instructionOverlay">
+    <div class="instruction-modal-card">
+      <h3 class="demo-title" id="demoTitle">TAP WITH 1 FINGER</h3>
+      <p class="demo-sub" id="demoSub">Watch how to play!</p>
+
+      <div class="demo-animation-box" id="demoAnimationBox">
+        <div class="demo-target-circle">🌟</div>
+        <div class="demo-hand-cursor">☝️</div>
+      </div>
+
+      <button class="demo-start-btn" id="demoStartBtn">READY! LET'S PLAY ✨</button>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       🎉 CELEBRATION MODAL
+       ========================================== -->
+  <div class="celebration-modal" id="celebrationModal">
+    <div class="celebration-card">
+      <div class="celeb-stars">⭐⭐⭐</div>
+      <h3 class="celeb-title" id="celebTitle">SUPER JOB!</h3>
+      <p class="celeb-msg" id="celebMsg">You completed the activity!</p>
+      <button class="demo-start-btn" id="celebBtn">CONTINUE ADVENTURE 🚀</button>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js"></script>
+  <script src="js/audio.js?v=1.0.2"></script>
+  <script src="js/components/instructionOverlay.js?v=1.0.2"></script>
+  <script src="js/components/confetti.js?v=1.0.2"></script>
+  <script src="js/activities/activityData.js?v=1.0.2"></script>
+  <script src="js/activities/activityEngine.js?v=1.0.2"></script>
+  <script src="js/games/gameEngine.js?v=1.0.2"></script>
+  <script src="js/magicBoard.js?v=1.0.0"></script>
+  <script src="js/magicalCloth.js?v=1.0.0"></script>
+  <script src="js/app.js?v=1.0.2"></script>
+</body>
+
+</html>

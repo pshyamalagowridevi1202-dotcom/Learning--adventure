@@ -1,0 +1,24 @@
+<svg width="850" height="350" viewBox="0 0 850 350" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="jungleSky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bbf7d0"/>
+      <stop offset="100%" stop-color="#86efac"/>
+    </linearGradient>
+    <linearGradient id="jungleHill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4ade80"/>
+      <stop offset="100%" stop-color="#15803d"/>
+    </linearGradient>
+  </defs>
+  <rect width="850" height="350" fill="url(#jungleSky)"/>
+  <circle cx="100" cy="70" r="45" fill="#fef08a" opacity="0.9"/>
+  <!-- Hills -->
+  <path d="M-50 350 Q 200 200 450 350 Z" fill="#22c55e" opacity="0.7"/>
+  <path d="M 300 350 Q 600 180 900 350 Z" fill="url(#jungleHill)"/>
+  <!-- Trees -->
+  <circle cx="80" cy="180" r="65" fill="#166534"/>
+  <rect x="70" y="240" width="22" height="90" fill="#78350f"/>
+  <circle cx="780" cy="160" r="75" fill="#15803d"/>
+  <rect x="770" y="230" width="24" height="100" fill="#78350f"/>
+  <!-- Vines -->
+  <path d="M 0 40 Q 200 120 400 40 Q 600 130 850 30" fill="none" stroke="#16a34a" stroke-width="8"/>
+</svg>

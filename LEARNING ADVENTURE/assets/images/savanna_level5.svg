@@ -1,0 +1,14 @@
+<svg width="850" height="350" viewBox="0 0 850 350" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="safariSunset" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffedd5"/>
+      <stop offset="50%" stop-color="#fed7aa"/>
+      <stop offset="100%" stop-color="#fdba74"/>
+    </linearGradient>
+  </defs>
+  <rect width="850" height="350" fill="url(#safariSunset)"/>
+  <circle cx="425" cy="180" r="75" fill="#fef08a" opacity="0.85"/>
+  <path d="M -50 350 L 900 350 L 900 280 Q 425 240 -50 280 Z" fill="#ca8a04"/>
+  <!-- Safari Acacia Tree Silhouette -->
+  <path d="M 700 280 L 710 160 Q 640 100 550 110 Q 720 70 800 120 Z" fill="#78350f"/>
+</svg>
